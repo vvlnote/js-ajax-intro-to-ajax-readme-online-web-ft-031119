@@ -2,12 +2,16 @@
 function showRepositories() {
   let repos = JSON.parse(this.responseText);
   console.log(repos);
+<<<<<<< HEAD
   const repoList = `<ul>${repos.map(r =>
     '<li>' +
     r.name +
     ' - <a href="#" data-repo="' +
     r.name +
     '" onclick="getCommits(this)">Get Commits</a></li>').join('')}</ul>`;
+=======
+  const repoList = `<ul>${repos.map(r => '<li>' + r.name + '</li>').join('')}</ul>`;
+>>>>>>> a66d0efc621dc03b296856585b473cd44bbc4a44
   document.getElementById('repositories').innerHTML = repoList;
 
   // let repList = '<ul>';
@@ -18,6 +22,7 @@ function showRepositories() {
   // document.getElementById('repositories').innerHTML = repoList;
 }
 
+<<<<<<< HEAD
 function showCommits() {
   const commits = JSON.parse(this.responseText);
   console.log(commits);
@@ -43,6 +48,8 @@ function getCommits(el) {
 }
 
 
+=======
+>>>>>>> a66d0efc621dc03b296856585b473cd44bbc4a44
 function getRepositories() {
   const req = new XMLHttpRequest();
   req.addEventListener('load', showRepositories);
